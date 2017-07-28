@@ -30,5 +30,6 @@ got a callback!
 Request: {"ref":"337188384","x":"YYY","sys":{"ref":null,"obj_id":"597ad4d8f6c3767e8da7be19","conv_id":255213,"node_id":"5979c38b60e32776634c619a"}}
 Async response: {"ref":"337188384","x":"YYY","sys":{"ref":null,"obj_id":"597ad4d8f6c3767e8da7be19","conv_id":255213,"node_id":"5979c38b60e32776634c619a"}}
 ```
+Your request should contain your data (with be used in Corezoid logic) in field "data" and your process webhook in field "webhook"   
 
 - Proxy will wait asynchronous response from Corezoid and will send it to your application as synchronous response
