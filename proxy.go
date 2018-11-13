@@ -38,12 +38,12 @@ func main() {
 
 func callbackHandler(w http.ResponseWriter, r *http.Request) {
 	fmt.Println("got a callback!")
-	str, data, err := readJSON(r)
+	str, dat, err := readJSON(r)
 	if err != nil {
 		fmt.Fprintf(w, "%q\n", err)
 		return
 	}
-
+	data := dat["ops"].([]interface{})[0].(map[string]interface{})[dataKey].(map[string]interface{})
 	// get channel by ref and write into
 	ref := data[refKey].(string)
 	ch := proxy[ref]
