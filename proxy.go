@@ -51,6 +51,7 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 	delete(proxy, ref)
 
 	// return response
+	w.Header().Set("Content-Type", "application/json")
 	fmt.Fprintf(w, "%v\n", "{\"api_result\":\"ok\"}")
 }
 
